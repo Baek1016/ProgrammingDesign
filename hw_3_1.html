@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+학번 : 201910967    
+
+이름 : 백재원
+
+과제명 : hw3_1.html
+
+-->
+    <h1>
+        <b>지원서</b>
+    </h1>
+    <p>HTML,CSS,Java script를 대한 경험이 있는 분을 찾습니다.</p>
+    <hr>
+
+    <h2>개인 정보</h2>
+    <form action="proc_form.jsp" method="get"  enctype="text/plain">
+        <ul>
+            <li>
+                이름: <input type="text" name="name"   placeholder="공백없이 입력하세요."><br>
+            </li>
+            <li>
+                연락처: <input type="text" name="tel_num"><br>
+            </li>
+        </ul>
+        
+    <h2>지원 분야</h2>
+    
+        <ul>
+            <li>
+                <input type="radio" name="subject"id="웹 퍼플리싱" value="웹 퍼플리싱">
+            <label for="웹 퍼플리싱">웹 퍼플리싱</label><br>
+            </li>
+            <li>
+                <input type="radio" name="subject"id="웹 어플리게이션"value="웹 어플리게이션">
+            <label for="웹 어플리게이션">웹 어플리게이션</label><br>
+
+            </li>
+            <li>
+                <input type="radio" name="subject"id="웹 개발 환경 개선"value="웹 개발 환경 개선">
+            <label for="웹 개발 환경 개선">웹 개발 환경 개선</label><br>
+            </li>
+        </ul>
+        
+    <h2>지원 동기</h2>
+    
+        내용:<br>
+        <textarea name="comment" rows="5" cols="50"></textarea><br>
+        <input type="submit" value="접수하기"/>
+        <input type="reset" value="다시 쓰기"/>
+        </form>
+</body>
+</html>
