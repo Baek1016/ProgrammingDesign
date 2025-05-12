@@ -1,0 +1,85 @@
+<!-- --------------
+학번 : 201910967    
+이름 : 백재원
+과제설명 : 10주차 과제
+----------------- -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>기초 웹 구조</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: yellow;
+      padding: 10px;
+      height: 30px;
+    }
+
+    .main-header {
+      background-color: red;
+      padding: 20px;
+      height: 70px;
+    }
+
+    main {
+      display: flex;
+      height: 300px;
+    }
+
+    section {
+      background-color: blue;
+      flex: 1;
+      padding: 10px;
+    }
+
+    article {
+      background-color: green;
+      flex: 1;
+      padding: 10px;
+    }
+
+    aside {
+      background-color: purple;
+      flex: 1;
+      height: 150px; /* 높이만 다르게 */
+      padding: 10px;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .spacer {
+      height: 200px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header></header>  <!-- 노란색 헤더 -->
+
+  <div class="main-header"></div>  <!-- 빨간색 헤더 (노랑 밑에) -->
+
+  <main>
+    <section></section>
+    <article></article>
+    <aside></aside>
+  </main>
+
+  <footer></footer>
+
+  <div class="spacer"></div>
+
+</body>
+</html>
