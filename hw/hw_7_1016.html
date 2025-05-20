@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hw7_1 - 생년월일 추출</title>
+</head>
+<body>
+    <script>
+        // 학번 : (201910967)
+        // 이름 : (qorwodnjs)
+        // 과제설명 : 주민등록번호 앞자리와 뒷자리를 입력받아 생년월일을 추출하는 프로그램
+
+        // 입력
+        var front = prompt("주민등록번호 앞자리 입력:"); // 6자리, 예: 110523
+        var back = prompt("주민등록번호 뒷자리 입력:");  // 7자리, 예: 4023111
+
+        // 산술연산자만 사용하여 연, 월, 일 분리
+        var yy = (front - (front % 10000)) / 10000;
+        var mm = ((front % 10000) - (front % 100)) / 100;
+        var dd = front % 100;
+
+        // 뒷자리 첫 숫자(성별/세기)
+        var s = (back - (back % 1000000)) / 1000000;
+
+        // 삼항 연산자만 사용하여 연도 계산
+        var year = (s == 1 || s == 2) ? (1900 + yy) : (2000 + yy);
+
+        // 출력
+        document.write("생년월일은 다음과 같습니다.<br>");
+        document.write(year + "<br>");
+        document.write(mm + "<br>");
+        document.write(dd + "<br>");
+    </script>
+</body>
+</html>
