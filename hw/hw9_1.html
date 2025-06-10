@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onmouseover="mouseOver(this)" onmouseout = "mouseOut(this)">
+        <img id= "a" src="../sw_off.png" >
+    </div>
+    <script>
+        function mouseOver(ele){
+            document.getElementById("a").src = "../sw_on.png";
+        }
+        function mouseOut(ele){
+            document.getElementById("a").src = "../sw_off.png";
+        }
+    </script>
+</body>
+</html>
