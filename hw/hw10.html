@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let fontSize = 16; // 기본 글자 크기
+
+        function Plusfont(){
+            fontSize++;
+            document.getElementById("selectfontcolor").style.fontSize = fontSize +"px";
+        }
+        function Minusfont(){
+            fontSize--;
+            document.getElementById("selectfontcolor").style.fontSize = fontSize +"px";
+        }
+        function Zerofont(){
+            fontSize = 16; // 기본 글자 크기로 초기화
+            document.getElementById("selectfontcolor").style.fontSize = fontSize +"px";
+        }
+        function changeColor(selectTag){
+            document.getElementById("selectfontcolor").style.color = selectTag.value;
+        }
+
+
+    </script>
+</head>
+<body>
+    <form name="myForm" action = "..." method="post">
+        <p>글짜 크기</p>
+        <button name = "plus" type="button" onclick="Plusfont()">+</button>
+        <button name = "zero" type="button" onclick="Zerofont()">0</button>
+        <button name = "minus" type="button" onclick="Minusfont()">-</button>
+        <br>
+
+        <p>글짜색</p>
+        <select name="selectcolor" onchange="changeColor(this)">
+            <option value="black">검정</option>
+            <option value="blue">파랑</option>
+            <option value="red">빨강</option>
+            <option value="yellow">노랑</option>
+        </select>
+        
+        <p id="selectfontcolor">송충이는 솔잎을 먹어야 산다.</p>
+    </form>
+</body>
+</html>
